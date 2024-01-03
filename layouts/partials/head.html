@@ -89,6 +89,9 @@
 {{- end }}
 {{- end -}}
 
+{{- $confetti_js := resources.Get "js/js-confetti.js"}}
+<script defer crossorigin="anonymous" src="{{ $confetti_js.RelPermalink }}"></script>
+
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
